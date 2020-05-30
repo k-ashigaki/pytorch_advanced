@@ -1,12 +1,10 @@
-﻿# memo
-
-## VS Code
-### プレビュー表示
+﻿# VS Codeとマークダウン
+## プレビュー表示
 https://www.atmarkit.co.jp/ait/articles/1804/20/news030.html
 
 表示させるものがないと動かないけど、ctlr+K, v
 
-### リンクの貼り付け
+## リンクの貼り付け
 参考
 
 https://qiita.com/kamorits/items/6f342da395ad57468ae3
@@ -16,10 +14,10 @@ https://www.it-swarm.dev/ja/hyperlink/%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82
 ```
 ローカルの場合は、(./folder/file)でいける
 
-## anaconda 仮想環境の構築
+# anaconda 仮想環境の構築
 [anaconda_prompt履歴](./memo_files/仮想環境作成_anaconda_prompt.txt)
 
-### 仮想環境を作る
+## 仮想環境を作る
 https://qiita.com/ozaki_physics/items/985188feb92570e5b82d
 
 仮想環境の閲覧
@@ -38,7 +36,7 @@ conda create -n 環境名 python=3.6
 ```
 condaを入れないと動くときと動かない時がある
 
-### jupyter notebookを入れる(pip base)
+## jupyter notebookを入れる(pip base)
 https://qiita.com/mzmiyabi/items/b1677e66474933d9a6fc
 
 pipの状態を最新に更新
@@ -62,7 +60,7 @@ Installing collected packages: pip, setuptools
 ERROR: Could not install packages due to an EnvironmentError: [WinError 5] アクセスが拒否されました。: 'C:\\Users\\PUMPPC~1\\AppData\\Local\\Temp\\pip-uninstall-roxcbls5\\pip.exe'
 Consider using the `--user` option or check the permissions.
 ```
---userを追加して対処
+--userを追加して対処（エラーが出た場合は行う）
 ```
 pip install --upgrade pip setuptools --user
 ```
@@ -77,3 +75,36 @@ Installing collected packages: setuptools
   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
 Successfully installed setuptools-47.1.1
 ```
+必要パッケージを入れる
+```
+pip install numpy scipy matplotlib Pillow ipython[all]
+```
+いざインストール
+```
+pip install jupyter
+```
+
+## さらにパッケージを追加
+opencv 
+```
+pip install opencv-python
+```
+
+pytorch
+```
+pip install torch==1.3.0+cpu torchvision==0.4.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+```
+確認
+```
+import torch
+
+print(torch.__version__)
+```
+# PyTorchによる発展ディープラーニングの本
+git: 
+https://github.com/k-ashigaki/pytorch_advanced
+
+ローカルclone: 
+```C:\Users\Pump PC\Documents\GitHub\pytorch_advanced```
+
